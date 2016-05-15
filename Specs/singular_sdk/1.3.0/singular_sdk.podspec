@@ -1,0 +1,17 @@
+Pod::Spec.new do |s|
+  s.name             = "singular_sdk"
+  s.version          = "1.3.0"
+  s.summary          = "The Singular tracker SDK for iOS"
+  s.homepage         = "https://singular.net"
+  s.license          = 'MIT'
+  s.author           = { "Singular" => "contact@singular.net" }
+  s.source           = { :git => "https://github.com/sng-sdk/singular_ios_sdk.git", :tag => "1.3.0" }
+
+  s.platform     = :ios, '6.0'
+  s.requires_arc = true
+
+
+  s.preserve_paths = 'Singular.embeddedframework/Singular.framework'
+  s.public_header_files = 'Singular.embeddedframework/Singular.framework/Versions/A/Headers/*h'
+  s.vendored_frameworks = 'Singular.embeddedframework/Singular.framework'
+end
